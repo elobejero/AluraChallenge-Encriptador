@@ -1,0 +1,317 @@
+﻿body {
+    font-family: 'Montserrat', sans-serif;
+    
+
+}
+
+.div-general {
+    background: radial-gradient(skyblue,#0094ff);
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div-alaizquierda {
+    width: 10%;
+    height: 70%;
+    margin: auto;
+    margin-left: 40px;
+    text-align: center;
+}
+
+#logo{
+    width:70%;
+}
+
+.div-alaizquierda img {
+    margin-top: 40px;
+    border-radius: 50px;
+}
+
+h1 {
+    background: radial-gradient(skyblue,#0094ff);
+    color: blue;
+    font-family: Bahnschrift;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+}
+
+.div-alcentro {
+    width: 70%;
+    height: 100%;
+    margin: 150px 2px 5px 2px;
+    border-style: none;
+}
+
+.ingreso-texto {
+    width: 90%;
+    height: 60%;
+}
+
+.textoaingresar {
+    width: 100%;
+    height: 90%;
+}
+
+textarea {
+    background: none;
+    font-size: x-large;
+    width: 100%;     
+    margin: 15px 0 5px 5px;
+    text-align: center;
+    border: none;    
+}
+
+.text-adv{
+    font-weight:bold;
+}
+
+.div-advertencia {
+    width: 100%;
+    height: 10%;
+    font-weight: bold;
+    font-size: 14px;    
+    text-align: start;  
+}
+
+.div-aladerecha {
+    width: 30%;
+    background: white;
+    margin: auto;
+    margin-right: 40%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px 15px #000000;
+    margin: 2px 0 0 2px;
+    height: 100%;
+}
+
+.div-text-encript {
+    width: 90%;
+    height: 40%;
+    margin: auto;
+    margin-top: 10%;
+    
+}
+
+#textencrip {
+    width: 100%;
+    height: 20%;
+    margin: auto;
+    margin-top: 1%;
+    font-size: xx-large;
+}
+
+.texto-encriptado {
+    color: #0A3871;
+}
+
+.div-imagen {
+    width:100%;
+    height: 30%;
+    margin-inline:auto;    
+    border-radius: 10px;
+}
+
+.div-copiar{
+    margin-bottom:2%;
+}
+
+textarea:hover {
+    background: skyblue;
+    opacity: 0,7;
+    border: blue;
+    border-radius: 10px;
+}
+
+.div-botones {   
+    width:100%;
+    vertical-align:bottom;
+    height:10%;
+    display: flex;    
+    color: white;        
+}
+
+button {
+    box-shadow: 5px 5px 15px 0.4px mediumvioletred;
+}
+
+#boton-encriptar:hover, #boton-desencriptar:hover, #boton-copiar:hover {
+    background: red;    
+}
+
+#img-noencrip {
+    margin-top: 4px;
+    border-radius: 25px;
+}
+
+#img-encrip {
+    margin-top: 4px;
+    border-radius: 25px;
+}
+
+#boton-encriptar {
+    color: white;
+    background: darkblue;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 65px 0 65px;
+    vertical-align: baseline;
+    margin: 8px 10px 0 0;
+}
+
+#boton-desencriptar {
+    color: white;
+    background: darkblue;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 47px 0 47px;
+    vertical-align: baseline;
+    margin: 8px 0 0 10px;
+}
+
+.boton-copiar {
+    display: flex;
+}
+
+#boton-copiar {
+    color: white;
+    background: darkblue;
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30%;
+    margin-left: 60px;
+}
+
+.mensaje{
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+}
+
+footer {
+    background: radial-gradient(skyblue,#0094ff);
+    padding-top: 8px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .div-general {
+        flex-direction: column;
+    }
+
+    .div-alaizquierda {
+        width: 20%;
+        height: 40%;
+    }
+
+    .div-alcentro {
+        flex-direction: column;
+        width: auto;
+        height: 60%;
+        margin:2px 2px 5px 2px;
+    }
+
+    .ingreso-texto .div-text-encript {
+        width: 98%;
+        height: 50%;
+        margin: 2px 2px 20px 2px;
+    }
+
+    .div-advertencia {
+        margin-top:20px;
+        padding: 20px 0 0 0;
+    }
+
+    .div-botones {
+        width: 90%;
+        height: 10%;
+        margin: 2px 2px 2px 2px;
+    }
+
+    .div-aladerecha {
+        width: 90%;
+        height: 20%;
+        margin: auto;
+    }
+
+    .div-imagen #img-encrip #img-noencrip .div- {
+        display: none !important;
+    }    
+}
+
+@media screen and (max-width:375px) {
+    .div-general {
+        width:127%;
+        height:100%;
+        flex-direction: column;
+    }
+
+    h1{
+        width:127%;
+        font-size:35px;
+    }
+
+    .div-alaizquierda {
+        width: 20%;
+        height: 30%;
+    }
+
+    .div-alcentro {
+        flex-direction: column;
+        width: 90%;
+        height: 60%;
+        margin: 2px 2px 5px 2px;
+    }
+
+    .ingreso-texto .div-text-encript {        
+        width: 99%;
+        height: 30%;
+        margin: auto;
+    }
+
+    .div-advertencia {
+        margin-top: auto;
+        padding: 20px 0 0 0;
+    }
+
+    .div-botones {
+        width: 2%;
+        height: 10%;
+        margin: 2px 2px 2px 2px;
+    }
+
+    .button{
+        width:10%;
+
+    }
+
+    .div-aladerecha {
+        width: 90%;
+        height: 20%;
+        margin: auto;
+    }
+
+    .div-imagen {
+        display: none !important;
+    }
+
+    footer{
+        width:117%;
+        padding:18px;
+    }
+}
+
+    
+

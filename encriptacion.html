@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" width=device-width">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="tiutlo">
+            <h1>Cifrar/Desifrar un texto</h1>
+        </div>
+    </header>
+
+    <div class="div-general">
+
+        <div class="div-alaizquierda">
+            <img id="logo" src="imagenes/logo.jfif" alt="log-encriptacion" width="100%">
+        </div>
+        
+            <div class="div-alcentro">
+                <div class="ingreso-texto">
+                    <textarea name="texto" id="textoaingresar" cols="60" rows="10" placeholder="Ingrese el texto"></textarea>
+                </div>
+                <div class="advertencia">
+                    <p class="text-adv">❗ "Ingrese el texto solo en minusculas y sin puntuaciones"</p>
+                </div>
+                <div class="div-botones" id="botones">
+                    <div class="div-encriptar">
+                        <button type="button" onclick="encriptext()" id="boton-encriptar">Encriptar</button>
+                    </div>
+                    <div class="div-desencriptar">
+                        <button type="button" onclick="descriptext()" id="boton-desencriptar">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="div-aladerecha">
+            <div class="div-text-encript" style="display:block;">
+                <textarea name="texto" id="textencrip" cols="60" rows="10" placeholder="Ningun texto se ha encriptado"></textarea>                
+            </div>
+            <div class="div-imagen"  id="oculto" style="display:block;">
+                <img id="img-noencrip" src="imagenes/no_encontrado.png" alt="Imagen de encriptación" style="display:none;" width="100%">
+                <img id="img-encrip" src="imagenes/encontrado.jpg" alt="Imagen de encriptación" style="display:none;" width="100%">
+            </div>            
+            <div class="div-copiar"  id="oculto2"  style="display:none;">
+                <button type="button" onclick="copiartext()" id="boton-copiar">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function minusculas(){
+            var minusculas = document.getElementById("textoaingresar").value;
+
+
+        }
+        /* encriptador*/
+        function encriptext() {
+            var textorig = document.getElementById("textoaingresar").value;
+            textorig = textorig.replace(/e/g, "enter");
+            textorig = textorig.replace(/i/g, "imes");
+            textorig = textorig.replace(/a/g, "ai");
+            textorig = textorig.replace(/o/g, "ober");
+            textorig = textorig.replace(/u/g, "ufat");
+            document.getElementById("textencrip").value = textorig;   
+            document.getElementById("textoaingresar").value = "";
+            
+        
+            var x = document.getElementById("img-encrip");
+            if (x.style.display === "none") {
+                x.style.display = "block"; 
+            } else {
+                    x.style.display = "none";               
+            }
+
+            var x = document.getElementById("oculto2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }    
+            
+            
+        }
+        /* desencriptador*/
+        function descriptext() {
+            var textorig = document.getElementById("textoaingresar").value;
+            textorig = textorig.replace(/enter/g, "e");
+            textorig = textorig.replace(/imes/g, "i");
+            textorig = textorig.replace(/ai/g, "a");
+            textorig = textorig.replace(/ober/g, "o");
+            textorig = textorig.replace(/ufat/g, "u");
+            document.getElementById("textencrip").value = textorig;
+            document.getElementById("textoaingresar").value = "";
+            
+
+
+            var x = document.getElementById("img-encrip");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+            var x = document.getElementById("oculto2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            
+            
+        }
+        /* copiar*/
+        function copiartext() {
+            var textocopiado = document.getElementById("textencrip");
+            textocopiado.select();
+            document.execCommand("copy");            
+            document.getElementById("textencrip").value = "";
+            
+
+           
+            /*actualiza la pagina*/
+            var textorig = document.getElementById("textencrip").value;            
+            window.location.href = window.location.href;
+            
+
+            
+        }        
+    </script>
+    
+
+    <footer>
+        <div class="disenador">
+            <p>Hecho por: Obed Isai Cojolon Ramirez</p>
+        </div>
+    </footer>
+</body>
+</html>
