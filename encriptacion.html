@@ -27,7 +27,7 @@
         
             <div class="div-alcentro">
                 <div class="ingreso-texto">
-                    <textarea name="texto" id="textoaingresar" style="text-transform:lowercase" cols="60" rows="10" placeholder="Ingrese el texto"></textarea>
+                    <textarea name="texto" id="textoaingresar" style="text-transform:lowercase" cols="60" rows="10" pattern="[a-z]{1,15}" placeholder="Ingrese el texto"></textarea>
                 </div>
                 <div class="advertencia">
                     <p class="text-adv">❗ "Ingrese el texto solo en minusculas y sin puntuaciones"</p>
@@ -44,7 +44,7 @@
         
         <div class="div-aladerecha">
             <div class="div-text-encript" style="display:block;">
-                <textarea name="texto" id="textencrip" style="text-transform:lowercase" cols="60" rows="10" placeholder="Ningun texto se ha encriptado"></textarea>                
+                <textarea name="texto" id="textencrip" style="text-transform:lowercase" cols="60" rows="10" pattern="[a-z]{1,15}" placeholder="Ningun texto se ha encriptado"></textarea>                
             </div>
             <div class="div-imagen"  id="oculto" style="display:block;">
                 <img id="img-noencrip" src="imagenes/no_encontrado.png" alt="Imagen de encriptación" style="display:none;" width="100%">
